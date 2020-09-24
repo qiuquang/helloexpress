@@ -21,7 +21,10 @@ var app = express();
 // 定义视图目录
 app.set('views', path.join(__dirname, 'views'));
 // 定义视图模板引擎
-app.set('view engine', 'jade');
+// app.set('view engine', 'jade');
+// 定义视图模板引擎 art-template express-art-template
+app.engine('.html', require('express-art-template'));
+app.set('view engine', 'html');
 
 // 定义日志打印级别
 app.use(logger('dev'));
