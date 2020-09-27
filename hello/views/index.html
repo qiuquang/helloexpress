@@ -7,6 +7,16 @@
 <body>
 <h1>这是一个HTML文件</h1>
 <h2>这是title的值：{{ title }}</h2>
+{{if age < 30}}
 <p>大家好，我是{{name}}，我今年{{age}}岁，很高兴认识大家！</p>
+{{/if}}
+{{if age > 30}}
+<p>
+  大家好，我是{{name}}，
+  {{if happy}}
+  <span>很高兴认识大家！</span>
+  {{/if}}
+</p>
+{{/if}}
 </body>
 </html>
