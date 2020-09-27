@@ -7,7 +7,11 @@ router.get('/', function(req, res, next) {
   // v0.1版  前面是模板文件名  后面是传入到页面中的对象
   // res.render('index', { title: 'Express' });
   // v0.2版  条件渲染
-  res.render('index', { name: '邱全', age: 44, happy: false });
+  // res.render('index', { name: '邱全', age: 44, happy: false });
+  // v0.3版  循环渲染
+  res.render('index', { name: '邱全', list: [
+    {id: 1, content: '今天天气不错'},{id: 2, content: '昨天你吃了什么？'},{id: 3, content: '工作好累'}
+  ],targetId: 2 });
 });
 
 //world路由

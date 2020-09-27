@@ -7,16 +7,12 @@
 <body>
 <h1>这是一个HTML文件</h1>
 <h2>这是title的值：{{ title }}</h2>
-{{if age < 30}}
-<p>大家好，我是{{name}}，我今年{{age}}岁，很高兴认识大家！</p>
-{{/if}}
-{{if age > 30}}
-<p>
-  大家好，我是{{name}}，
-  {{if happy}}
-  <span>很高兴认识大家！</span>
+{{ each list as item }} 
+  {{if item.id === targetId}}
+  <p style="color:red;">数据id：{{item.id}},内容：{{item.content}}</p>
+  {{else}}
+  <p>数据id：{{item.id}},内容：{{item.content}}</p>
   {{/if}}
-</p>
-{{/if}}
+{{ /each }}
 </body>
 </html>
